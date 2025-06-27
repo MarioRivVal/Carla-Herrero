@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+:root {
+  --primary-color: #e30613;
+  --black-color: #1c1c1c;
+  --white-color: #f8f8f8;
+
+  --font-par: "Inter", sans-serif;
+  --font-tit: "Playfair Display", serif;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--black-color);
+  background-color: var(--white-color);
+  font-family: var(--font-par);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: top;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+section {
+  padding: 1rem 2rem;
+}
+
+h2 {
+  font-family: var(--font-tit);
+  font-style: italic;
+  font-size: 3.6rem;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* UTILITIES */
+
+.u--red-bg {
+  background-color: var(--primary-color);
+}
+
+.u--white {
+  color: var(--white-color);
+}
+
+.u--grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+@media (min-width: 480px) {
+}
+
+/* Tableta normal / paisaje */
+@media (min-width: 768px) {
+  html {
+    font-size: 66.5%;
+  }
+
+  section {
+    padding: 2rem 4rem;
+  }
+
+  h2 {
+    margin-bottom: 4rem;
+    text-align: left;
+  }
+  .u--grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+  }
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1280px) {
+  html {
+    font-size: 75%;
+  }
+}

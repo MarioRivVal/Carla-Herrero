@@ -1,0 +1,36 @@
+header {
+  padding: 2rem;
+  max-width: 160rem;
+  margin: 0 auto;
+}
+
+.hero {
+  border-top: solid var(--white-color) 1px;
+  border-bottom: solid var(--white-color) 1px;
+  padding: 2rem 0;
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.hero__img {
+  height: 45rem;
+}
+
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  color: var(--white-color);
+  font-size: 1.8rem;
+  text-align: center;
+}
+/* -------------------------------- */
+@media (min-width: 768px) {
+  header {
+    padding: 4rem 2rem;
+  }
+
+  .hero {
+    padding: 4rem 0;
+  }
+}

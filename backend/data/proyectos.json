@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Festival Internacional de Cine de Gijón",
+    "services": ["prototipado y desarrollo web"],
+    "img": "image1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Flaman Atelier",
+    "services": ["social media manager"],
+    "img": "image2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Anahí Martínez láser",
+    "services": ["branding"],
+    "img": "image3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "It Nails",
+    "services": ["branding", "social media manager"],
+    "img": "image4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Descorchados wine podcast",
+    "services": ["branding", "social media manager"],
+    "img": "image5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Reclamatuseguro.es",
+    "services": ["social media manager"],
+    "img": "image6.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Odiet Lashes",
+    "services": ["prototipado y desarrollo web"],
+    "img": "image7.jpg"
+  },
+  {
+    "id": 8,
+    "title": "California Street Food",
+    "services": ["social media manager"],
+    "img": "image8.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Carmen Borja",
+    "services": ["social media manager", "gestión web"],
+    "img": "image9.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Cuchillo de Palo",
+    "services": ["prototipado y desarrollo web"],
+    "img": "image10.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Escuela Nutec",
+    "services": [
+      "social media manager",
+      "servicios de marketing",
+      "desarrollo web"
+    ],
+    "img": "image11.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Centro de Estudios Múltiples Dentales",
+    "services": [
+      "social media manager",
+      "servicios de marketing",
+      "desarrollo web"
+    ],
+    "img": "image12.jpg"
+  }
+]
