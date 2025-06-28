@@ -3,7 +3,7 @@ import useScrollReveal from "../../hooks/useScrollReveal";
 import ArrowTurnIcon from "../../icons/arrow-turn.svg?react";
 
 const PresentationCard = ({ project, className }) => {
-  const [ref, isVisible] = useScrollReveal(0.95); // se activa cuando está 50% en viewport
+  const [ref, isVisible] = useScrollReveal(0.95);
 
   const isTouch =
     typeof window !== "undefined" &&
