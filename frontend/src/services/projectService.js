@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/api/proyectos";
+const API_URL = "https://backend-carla-herrero.onrender.com";
 
 export const getProjects = async () => {
   try {
