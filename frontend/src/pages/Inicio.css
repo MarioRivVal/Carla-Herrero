@@ -7,7 +7,7 @@ header {
 .hero {
   border-top: solid var(--white-color) 1px;
   border-bottom: solid var(--white-color) 1px;
-  padding: 2rem 0;
+  padding: 4rem 0;
   max-width: 140rem;
   margin: 0 auto;
 }
@@ -24,6 +24,20 @@ header {
   font-size: 1.8rem;
   text-align: center;
 }
+
+.projects-preview {
+  padding: 3rem 0;
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.projects-preview__title-box {
+  margin-bottom: 2rem;
+}
+
+.projects-preview__title-box p {
+  text-align: center;
+}
 /* -------------------------------- */
 @media (min-width: 768px) {
   header {
@@ -32,5 +46,12 @@ header {
 
   .hero {
     padding: 4rem 0;
+  }
+  .projects-preview h2 {
+    text-align: center;
+  }
+
+  .projects-preview__title-box {
+    margin-bottom: 4rem;
   }
 }

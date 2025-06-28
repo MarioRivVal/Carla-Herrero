@@ -10,7 +10,7 @@ const SocialNav = () => {
       <ul>
         <li>
           <a
-            href="https://www.facebook.com"
+            href="https://wa.me/34677129329"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -19,7 +19,7 @@ const SocialNav = () => {
         </li>
         <li>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/bycarlaherrero?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -27,17 +27,13 @@ const SocialNav = () => {
           </a>
         </li>
         <li>
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="" target="_blank" rel="noopener noreferrer">
             <FacebookIcon width={36} height={36} />
           </a>
         </li>
         <li>
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/carlaherrero/"
             target="_blank"
             rel="noopener noreferrer"
           >

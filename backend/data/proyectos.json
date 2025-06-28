@@ -3,61 +3,67 @@
     "id": 1,
     "title": "Festival Internacional de Cine de Gijón",
     "services": ["prototipado y desarrollo web"],
-    "img": "image1.jpg"
+    "img": "cine-gijon.jpeg",
+    "best": true
   },
   {
     "id": 2,
     "title": "Flaman Atelier",
     "services": ["social media manager"],
-    "img": "image2.jpg"
+    "img": "flaman-atelier.jpeg",
+    "best": true
   },
   {
     "id": 3,
     "title": "Anahí Martínez láser",
     "services": ["branding"],
-    "img": "image3.jpg"
+    "img": "anahi-laser.jpeg",
+    "best": true
   },
   {
     "id": 4,
     "title": "It Nails",
     "services": ["branding", "social media manager"],
-    "img": "image4.jpg"
+    "img": "it-nails.jpeg",
+    "best": true
   },
   {
     "id": 5,
     "title": "Descorchados wine podcast",
     "services": ["branding", "social media manager"],
-    "img": "image5.jpg"
+    "img": "descorchados.jpeg",
+    "best": true
   },
   {
     "id": 6,
     "title": "Reclamatuseguro.es",
     "services": ["social media manager"],
-    "img": "image6.jpg"
+    "img": "reclama-seguro.jpeg",
+    "best": true
   },
   {
     "id": 7,
     "title": "Odiet Lashes",
     "services": ["prototipado y desarrollo web"],
-    "img": "image7.jpg"
+    "img": "odiet-lashes.jpeg"
   },
   {
     "id": 8,
     "title": "California Street Food",
     "services": ["social media manager"],
-    "img": "image8.jpg"
+    "img": "california.jpeg"
   },
   {
     "id": 9,
     "title": "Carmen Borja",
     "services": ["social media manager", "gestión web"],
-    "img": "image9.jpg"
+    "img": "carmen-borja.jpeg"
   },
   {
     "id": 10,
     "title": "Cuchillo de Palo",
     "services": ["prototipado y desarrollo web"],
-    "img": "image10.jpg"
+    "img": "cuchillo.jpeg"
   },
   {
     "id": 11,
@@ -67,7 +73,7 @@
       "servicios de marketing",
       "desarrollo web"
     ],
-    "img": "image11.jpg"
+    "img": "escuela-nutec.jpeg"
   },
   {
     "id": 12,
@@ -77,6 +83,6 @@
       "servicios de marketing",
       "desarrollo web"
     ],
-    "img": "image12.jpg"
+    "img": "cemd.jpeg"
   }
 ]

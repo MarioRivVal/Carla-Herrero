@@ -1,10 +1,22 @@
 import "./Inicio.css";
+import { useEffect, useState } from "react";
+import { getProjects } from "../services/projectService";
 import Nav from "../components/nav/Nav";
 import SocialNav from "../components/socialNav/SocialNav";
 import HeaderSlider from "../components/headerSlider/HeaderSlider";
 import ResponsiveImage from "../components/responsiveImage/ResponsiveImage,";
+import PresentationCard from "../components/PresentationCard/PresentationCard";
 
 const Home = () => {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    getProjects().then((data) => {
+      const filtered = data.filter((p) => p.best);
+      setProjects(filtered);
+    });
+  }, []);
+
   return (
     <>
       <Nav />
@@ -42,6 +54,27 @@ const Home = () => {
                 forma?
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="projects-preview">
+          <div className="projects-preview__title-box">
+            <h2>Estas marcas ya han dado el paso</h2>
+            <p>
+              ¿Sabías que nunca has estado tan cerca de alcanzar la imagen ideal
+              para tu negocio?
+            </p>
+          </div>
+          <div className="u--grid-6">
+            {projects.map((project, index) => (
+              <PresentationCard
+                key={index}
+                project={project}
+                className="projects-preview-card"
+              />
+            ))}
           </div>
         </div>
       </section>

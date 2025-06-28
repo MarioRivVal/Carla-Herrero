@@ -1,0 +1,88 @@
+.presentation-card {
+  position: relative;
+  overflow: hidden;
+  border: solid var(--primary-color) 2px;
+}
+
+.presentation-card__img {
+  position: relative;
+  transition-property: opacity, transform;
+  transition-duration: 0.5s, 0.5s;
+  transition-timing-function: ease-in-out, ease-in-out;
+}
+
+.presentation-card:hover .presentation-card__img {
+  opacity: 0;
+  transform: scale(1.02);
+}
+
+.presentation-card__icon {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.presentation-card__text {
+  text-align: center;
+  width: 100%;
+  padding: 0 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.presentation-card__text h3,
+.presentation-card__text p {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.presentation-card__text h3 {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.presentation-card:hover .presentation-card__text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.presentation-card:hover .presentation-card__text h3 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.25s;
+}
+.presentation-card:hover .presentation-card__text p {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+/* === SCROLL/TOUCH === */
+@media (hover: none) and (pointer: coarse) {
+  .presentation-card.is-visible .presentation-card__img {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+
+  .presentation-card.is-visible .presentation-card__text {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .presentation-card.is-visible .presentation-card__text h3 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.25s;
+  }
+
+  .presentation-card.is-visible .presentation-card__text p {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+  }
+}

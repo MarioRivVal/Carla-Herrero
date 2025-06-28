@@ -8,7 +8,7 @@ const slides = [
   { image: "/img/header-2.jpeg", text: ["Servicios", "de Diseño"] },
 ];
 
-export default function Slider() {
+const Slider = () => {
   const { frameRef, headlineRef, next, prev } = useHeaderSlider(slides, 5000);
 
   return (
@@ -25,4 +25,6 @@ export default function Slider() {
       </button>
     </div>
   );
-}
+};
+
+export default Slider;

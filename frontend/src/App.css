@@ -26,7 +26,7 @@ body {
   color: var(--black-color);
   background-color: var(--white-color);
   font-family: var(--font-par);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.5;
 }
 
@@ -49,12 +49,16 @@ section {
   padding: 1rem 2rem;
 }
 
-h2 {
+h2,
+h3 {
   font-family: var(--font-tit);
   font-style: italic;
-  font-size: 3.6rem;
   font-weight: 100;
   text-align: center;
+}
+
+h2 {
+  font-size: 3.6rem;
   margin-bottom: 2rem;
 }
 
@@ -62,6 +66,10 @@ h2 {
 
 .u--red-bg {
   background-color: var(--primary-color);
+}
+
+.u--red {
+  color: var(--primary-color);
 }
 
 .u--white {
@@ -73,6 +81,12 @@ h2 {
   grid-template-columns: 1fr;
   gap: 4rem;
   align-items: center;
+}
+
+.u--grid-6 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
 @media (min-width: 480px) {
@@ -95,6 +109,10 @@ h2 {
   .u--grid-2 {
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
+  }
+  .u--grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 

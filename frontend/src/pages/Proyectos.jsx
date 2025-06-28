@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { getProyectos } from "../services/projectService";
+import { getProjects } from "../services/projectService";
 import Nav from "../components/nav/Nav";
 
 const Proyectos = () => {
-  const [proyectos, setProyectos] = useState([]);
+  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    getProyectos().then((data) => setProyectos(data));
+    getProjects().then((data) => setProjects(data));
   }, []);
 
   return (
@@ -14,11 +14,11 @@ const Proyectos = () => {
       <Nav />
       <h2>Página Proyectos</h2>
       <ul>
-        {proyectos.map((p) => (
+        {projects.map((p) => (
           <li key={p.id}>
             <h3>{p.title}</h3>
             <p>{p.services.join(", ")}</p>
-            <img src={`./img/${p.img}`} alt={p.title} width={200} />
+            <img src={`./img/projects/${p.img}`} alt={p.title} width={200} />
           </li>
         ))}
       </ul>
