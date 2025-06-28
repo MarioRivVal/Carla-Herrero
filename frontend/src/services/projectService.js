@@ -1,6 +1,7 @@
 import axios from "axios";
-
-const API_URL = "https://backend-carla-herrero.onrender.com";
+const API_URL = import.meta.env.PROD
+  ? `${import.meta.env.VITE_API_URL}/api/proyectos`
+  : "http://localhost:3000/api/proyectos";
 
 export const getProjects = async () => {
   try {
