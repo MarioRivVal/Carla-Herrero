@@ -6,6 +6,12 @@ const proyectosRoutes = require("./routes/proyectos");
 app.use(cors());
 app.use(express.json());
 
+app.use(
+  cors({
+    origin: "https://carla-herrero.netlify.app",
+  })
+);
+
 app.use("/api/proyectos", proyectosRoutes);
 
 const PORT = process.env.PORT || 3000;
