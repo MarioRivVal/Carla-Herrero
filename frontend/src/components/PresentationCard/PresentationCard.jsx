@@ -1,19 +1,22 @@
+import { useEffect, useState } from "react";
 import "./PresentationCard.css";
 import useScrollReveal from "../../hooks/useScrollReveal";
 import ArrowTurnIcon from "../../icons/arrow-turn.svg?react";
 
 const PresentationCard = ({ project, className }) => {
   const [ref, isVisible] = useScrollReveal(0.95);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
-  const isTouch =
-    typeof window !== "undefined" &&
-    window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+  useEffect(() => {
+    const match = window.matchMedia("(hover: none) and (pointer: coarse)");
+    setIsTouchDevice(match.matches);
+  }, []);
 
   return (
     <div
       ref={ref}
       className={`presentation-card ${className} ${
-        isTouch && isVisible ? "is-visible" : ""
+        isTouchDevice && isVisible ? "is-visible" : ""
       }`}
     >
       <div className="presentation-card__img">
@@ -36,4 +39,5 @@ const PresentationCard = ({ project, className }) => {
     </div>
   );
 };
+
 export default PresentationCard;

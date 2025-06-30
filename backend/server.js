@@ -3,12 +3,24 @@ const cors = require("cors");
 const app = express();
 const proyectosRoutes = require("./routes/proyectos");
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://carla-herrero.netlify.app",
+];
+
 app.use(cors());
 app.use(express.json());
 
 app.use(
   cors({
-    origin: "https://carla-herrero.netlify.app",
+    origin: (origin, callback) => {
+      // Permite requests sin origen (como Postman) o desde los orígenes permitidos
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
   })
 );
 
