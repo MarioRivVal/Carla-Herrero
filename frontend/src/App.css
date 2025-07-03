@@ -46,7 +46,7 @@ a {
   text-decoration: none;
 }
 section {
-  padding: 1rem 2rem;
+  padding: 1rem 0;
 }
 
 h2,
@@ -113,6 +113,10 @@ h3 {
 
 .u--grid-6 {
   gap: 2rem;
+}
+
+.u--max-w {
+  max-width: 140rem;
 }
 
 @media (min-width: 480px) {

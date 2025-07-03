@@ -1,0 +1,23 @@
+.banner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  border-top: solid var(--white-color) 1px;
+  border-bottom: solid var(--white-color) 1px;
+  padding: 4rem 2rem;
+}
+
+.banner__box {
+  display: grid;
+  gap: 2rem;
+}
+
+.banner p {
+  font-size: 1.8rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .banner h2 {
+    text-align: center;
+  }
+}

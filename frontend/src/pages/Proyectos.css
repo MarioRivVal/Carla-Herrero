@@ -1,0 +1,11 @@
+.projects {
+  padding: 1rem 2rem;
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .projects {
+    padding: 4rem;
+  }
+}

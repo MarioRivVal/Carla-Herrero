@@ -1,6 +1,5 @@
 .instagram {
   position: relative;
-  max-width: 140rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;

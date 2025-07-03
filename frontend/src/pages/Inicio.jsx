@@ -38,7 +38,7 @@ const Home = () => {
       {/* INTRODUCTION */}
       <section className="u--red-bg">
         <div className="hero">
-          <div className="u--grid-2">
+          <div className="u--grid-2 u--max-w">
             <ResponsiveImage
               name="hero"
               ext="jpeg"
@@ -139,23 +139,26 @@ const Home = () => {
       {/* STATS */}
       <section className="u--red-bg">
         <div className="stats">
-          <div className="stats__descripcion">
-            <h2 className="u--white">¿Por qué elegirnos?</h2>
-            <p className="u--white">
-              Porque somos un equipo de profesionales apasionados por el diseño
-              web y la comunicación digital. Nos encanta lo que hacemos y nos
-              comprometemos a ofrecerte un servicio personalizado y de calidad.
-            </p>
-            <Button
-              text="Envia un whatsapp"
-              to={`https://wa.me/${telephoneNumber}`}
-              className="u--black-bg u--white"
-            />
-          </div>
-          <div className="stats__items">
-            {stats.map((stat, index) => (
-              <Stats key={index} {...stat} />
-            ))}
+          <div className="u--grid-2 u--max-w">
+            <div className="stats__descripcion">
+              <h2 className="u--white">¿Por qué elegirnos?</h2>
+              <p className="u--white">
+                Porque somos un equipo de profesionales apasionados por el
+                diseño web y la comunicación digital. Nos encanta lo que hacemos
+                y nos comprometemos a ofrecerte un servicio personalizado y de
+                calidad.
+              </p>
+              <Button
+                text="Envia un whatsapp"
+                to={`https://wa.me/${telephoneNumber}`}
+                className="u--black-bg u--white"
+              />
+            </div>
+            <div className="stats__items">
+              {stats.map((stat, index) => (
+                <Stats key={index} {...stat} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -163,6 +166,7 @@ const Home = () => {
       <section>
         <InstagramGallery />
       </section>
+      {/* FOOTER */}
       <section className="u--black-bg">
         <Footer />
       </section>

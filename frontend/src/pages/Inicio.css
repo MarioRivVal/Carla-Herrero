@@ -8,11 +8,11 @@ header {
 .stats {
   display: grid;
   grid-template-columns: 1fr;
+  justify-items: center;
   gap: 4rem;
   border-top: solid var(--white-color) 1px;
   border-bottom: solid var(--white-color) 1px;
-  padding: 4rem 0;
-  max-width: 140rem;
+  padding: 4rem 2rem;
   margin: 0 auto;
 }
 
@@ -35,7 +35,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 4rem;
-  padding: 4rem 0;
+  padding: 4rem 2rem;
   margin: 0 auto;
 }
 .services-preview {
@@ -76,7 +76,7 @@ header {
   .hero,
   .stats,
   .services-preview {
-    padding: 12rem 0;
+    padding: 12rem 4rem;
     gap: 6rem;
   }
 
@@ -85,7 +85,7 @@ header {
   }
 
   .projects-preview {
-    padding: 7rem 0 0 0;
+    padding: 7rem 4rem 0 4rem;
   }
 
   .title-box h2 {
@@ -104,7 +104,4 @@ header {
 }
 
 @media (min-width: 1024px) {
-  .stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
