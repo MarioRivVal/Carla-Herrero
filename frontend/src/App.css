@@ -50,7 +50,8 @@ section {
 }
 
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--font-tit);
   font-style: italic;
   font-weight: 100;
@@ -59,7 +60,18 @@ h3 {
 
 h2 {
   font-size: 3.6rem;
-  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+.btns-box {
+  display: flex;
+  gap: 4rem;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* UTILITIES */
@@ -72,20 +84,34 @@ h2 {
   color: var(--primary-color);
 }
 
+.u--white-bg {
+  background-color: var(--white-color);
+}
+
 .u--white {
   color: var(--white-color);
 }
 
-.u--grid-2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem;
-  align-items: center;
+.u--black-bg {
+  background-color: var(--black-color);
 }
 
+.u--grid-2,
+.u--grid-4,
 .u--grid-6 {
   display: grid;
   grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.u--grid-2 {
+  gap: 4rem;
+}
+.u--grid-4 {
+  gap: 2rem;
+}
+
+.u--grid-6 {
   gap: 2rem;
 }
 
@@ -98,17 +124,26 @@ h2 {
     font-size: 66.5%;
   }
 
-  section {
+  /* section {
     padding: 2rem 4rem;
-  }
+  } */
 
   h2 {
-    margin-bottom: 4rem;
     text-align: left;
+  }
+
+  .btns-box {
+    flex-direction: row;
+    justify-content: center;
+    gap: 8rem;
   }
   .u--grid-2 {
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
+  }
+  .u--grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
   .u--grid-6 {
     grid-template-columns: repeat(2, 1fr);
@@ -121,11 +156,19 @@ h2 {
   html {
     font-size: 70%;
   }
+  .u--grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
 }
 
 /* Pantallas grandes */
 @media (min-width: 1280px) {
   html {
     font-size: 75%;
+  }
+  .u--grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
   }
 }

@@ -1,0 +1,18 @@
+.stats__item {
+  display: grid;
+  justify-content: center;
+  padding-bottom: 3rem;
+  color: var(--white-color);
+  border: solid var(--white-color) 1px;
+}
+
+.stats__item-value {
+  font-size: 6rem;
+  font-family: var(--font-tit);
+  text-align: center;
+  font-style: italic;
+}
+
+.stats__item-title {
+  font-size: 1.8rem;
+}

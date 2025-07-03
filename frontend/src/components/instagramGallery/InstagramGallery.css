@@ -1,0 +1,36 @@
+.instagram {
+  position: relative;
+  max-width: 140rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 1rem 0;
+  margin: 0 auto;
+}
+
+.instagram .instagram__link {
+  aspect-ratio: 1/1;
+}
+
+.instagram .instagram-img img {
+  object-position: center;
+}
+
+.instagram__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+  .instagram {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .instagram {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

@@ -28,7 +28,7 @@ const PresentationCard = ({ project, className }) => {
       </div>
 
       <div className="presentation-card__text">
-        <h3>{project.title}</h3>
+        <h4>{project.title}</h4>
         {project.services.map((service, i) => (
           <p key={i} className="presentation-card__service">
             <span className="u--red">- </span> {service}{" "}

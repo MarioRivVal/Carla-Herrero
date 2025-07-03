@@ -30,11 +30,36 @@
 }
 
 .nav-item a {
+  position: relative;
   color: var(--black-color);
 }
 
 .nav-item--red a {
   color: var(--white-color);
+}
+
+/* Línea animada */
+.nav-item a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+/* Hover */
+.nav-item a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Activo */
+.nav-item a.active::after {
+  transform: scaleX(1);
 }
 
 @media (min-width: 768px) {

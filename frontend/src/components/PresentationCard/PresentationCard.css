@@ -35,13 +35,13 @@
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-.presentation-card__text h3,
+.presentation-card__text h4,
 .presentation-card__text p {
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-.presentation-card__text h3 {
+.presentation-card__text h4 {
   font-size: 2.6rem;
   margin-bottom: 2rem;
 }
@@ -51,7 +51,7 @@
   visibility: visible;
 }
 
-.presentation-card:hover .presentation-card__text h3 {
+.presentation-card:hover .presentation-card__text h4 {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.25s;
@@ -74,7 +74,7 @@
     visibility: visible;
   }
 
-  .presentation-card.is-visible .presentation-card__text h3 {
+  .presentation-card.is-visible .presentation-card__text h4 {
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.25s;

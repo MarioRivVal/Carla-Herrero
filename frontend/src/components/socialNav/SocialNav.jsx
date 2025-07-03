@@ -6,7 +6,7 @@ import LinkedinIcon from "../../icons/linkedin.svg?react";
 
 const SocialNav = () => {
   return (
-    <nav className="social-nav">
+    <nav className="social__nav">
       <ul>
         <li>
           <a
@@ -19,7 +19,7 @@ const SocialNav = () => {
         </li>
         <li>
           <a
-            href="https://www.instagram.com/bycarlaherrero?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            href="https://www.instagram.com/bycarlaherrero"
             target="_blank"
             rel="noopener noreferrer"
           >

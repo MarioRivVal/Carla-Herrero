@@ -4,6 +4,7 @@ import Inicio from "./pages/Inicio";
 import Servicios from "./pages/Servicios";
 import Contacto from "./pages/Contacto";
 import Proyectos from "./pages/Proyectos";
+import Politicas from "./pages/Politicas";
 import "./App.css";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/proyectos" element={<Proyectos />} />
+        <Route path="/politicas" element={<Politicas />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,25 @@
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.button.u--red-bg:hover {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+
+.button.u--white-bg:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.button.u--black-bg:hover {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
