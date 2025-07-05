@@ -15,13 +15,13 @@
 
 .testimonials__container {
   display: flex;
+  overflow: hidden;
 }
 
 .testimonial {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
   text-align: center;
   justify-content: center;
 }

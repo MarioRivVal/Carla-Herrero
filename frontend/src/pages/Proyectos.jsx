@@ -31,7 +31,7 @@ const Proyectos = () => {
             {projects.map((project, index) => (
               <PresentationCard
                 key={index}
-                project={project}
+                item={project}
                 className="projects-card"
               />
             ))}

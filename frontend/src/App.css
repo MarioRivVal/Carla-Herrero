@@ -35,7 +35,7 @@ img {
   height: 100%;
   object-fit: cover;
   display: block;
-  object-position: top;
+  /* object-position: top; */
 }
 
 li {
@@ -51,7 +51,8 @@ section {
 
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-family: var(--font-tit);
   font-style: italic;
   font-weight: 100;
@@ -96,6 +97,10 @@ h3 {
   background-color: var(--black-color);
 }
 
+.u--black {
+  color: var(--black-color);
+}
+
 .u--grid-2,
 .u--grid-4,
 .u--grid-6 {
@@ -119,18 +124,17 @@ h3 {
   max-width: 140rem;
 }
 
+.u--max-w-95 {
+  max-width: 95rem;
+}
+
 @media (min-width: 480px) {
 }
 
-/* Tableta normal / paisaje */
 @media (min-width: 768px) {
   html {
     font-size: 66.5%;
   }
-
-  /* section {
-    padding: 2rem 4rem;
-  } */
 
   h2 {
     text-align: left;
@@ -150,12 +154,12 @@ h3 {
     gap: 2rem;
   }
   .u--grid-6 {
+    width: 100%;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 }
 
-/* Escritorio */
 @media (min-width: 1024px) {
   html {
     font-size: 70%;

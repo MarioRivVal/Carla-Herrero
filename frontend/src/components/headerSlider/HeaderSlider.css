@@ -10,7 +10,6 @@
   border: none;
   cursor: pointer;
   padding: 0 10px;
-  user-select: none;
 }
 .container {
   position: relative;

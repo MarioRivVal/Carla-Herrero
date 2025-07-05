@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import "./PresentationCard.css";
 import useScrollReveal from "../../hooks/useScrollReveal";
-import ArrowTurnIcon from "../../icons/arrow-turn.svg?react";
 
-const PresentationCard = ({ project, className }) => {
+import Button from "../button/Button";
+
+const PresentationCard = ({ item, className, type = "" }) => {
   const [ref, isVisible] = useScrollReveal(0.95);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
@@ -12,32 +13,60 @@ const PresentationCard = ({ project, className }) => {
     setIsTouchDevice(match.matches);
   }, []);
 
-  return (
-    <div
-      ref={ref}
-      className={`presentation-card ${className} ${
-        isTouchDevice && isVisible ? "is-visible" : ""
-      }`}
-    >
-      <div className="presentation-card__img">
-        <img
-          src={`/img/projects/${project.img}`}
-          alt={project.name}
-          loading="lazy"
-        />
-      </div>
+  if (type === "service") {
+    return (
+      <div
+        ref={ref}
+        className={`presentation-card ${className} ${
+          isTouchDevice && isVisible ? "is-visible" : ""
+        }`}
+      >
+        <div className="presentation-card__img">
+          <img
+            src={`/img/services/${item.img}-1.png`}
+            alt={item.name}
+            loading="lazy"
+          />
+        </div>
 
-      <div className="presentation-card__text">
-        <h4>{project.title}</h4>
-        {project.services.map((service, i) => (
-          <p key={i} className="presentation-card__service">
-            <span className="u--red">- </span> {service}{" "}
-            <span className="u--red"> -</span>
-          </p>
-        ))}
+        <div className="presentation-card__text">
+          <h4>{item.name}</h4>
+          <Button
+            text="Saber más"
+            to=""
+            className="presentation__btn u--red-bg u--white"
+          />
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div
+        ref={ref}
+        className={`presentation-card ${className} ${
+          isTouchDevice && isVisible ? "is-visible" : ""
+        }`}
+      >
+        <div className="presentation-card__img">
+          <img
+            src={`/img/projects/${item.img}`}
+            alt={item.name}
+            loading="lazy"
+          />
+        </div>
+
+        <div className="presentation-card__text">
+          <h4>{item.title}</h4>
+          {item.services.map((service, i) => (
+            <p key={i} className="presentation-card__service">
+              <span className="u--red">- </span> {service}{" "}
+              <span className="u--red"> -</span>
+            </p>
+          ))}
+        </div>
+      </div>
+    );
+  }
 };
 
 export default PresentationCard;

@@ -12,8 +12,7 @@ import Stats from "../components/stats/Stats";
 import InstagramGallery from "../components/instagramGallery/InstagramGallery";
 import Footer from "../components/footer/Footer";
 
-import { services } from "../data/services";
-import { stats } from "../data/stats";
+import { servicesIntro } from "../data/servicesIntro";
 import { telephoneNumber } from "../data/utils";
 
 const Home = () => {
@@ -38,15 +37,15 @@ const Home = () => {
       {/* INTRODUCTION */}
       <section className="u--red-bg">
         <div className="hero">
-          <div className="u--grid-2 u--max-w">
+          <div className="u--grid-2 u--max-w-95">
             <ResponsiveImage
               name="hero"
               ext="jpeg"
               alt="Imagen de Carla Herrero"
               className="hero__img"
             />
-            <div className="hero__text">
-              <h2 className="u--white">Seguramente no me necesites...</h2>
+            <div className="hero__text u--white">
+              <h2>Seguramente no me necesites...</h2>
               <p>
                 …Pero tu web si!. Seguramente llegues rebotado de cualquier otra
                 agencia o empresa, pero soy experta en tratar tu web como si se
@@ -81,7 +80,7 @@ const Home = () => {
             {projects.map((project, index) => (
               <PresentationCard
                 key={index}
-                project={project}
+                item={project}
                 className="projects-preview-card"
               />
             ))}
@@ -112,7 +111,7 @@ const Home = () => {
             </p>
           </div>
           <div className="u--grid-4">
-            {services.map((service, index) => (
+            {servicesIntro.map((service, index) => (
               <ServiceCard
                 key={index}
                 Icon={service.Icon}
@@ -154,11 +153,8 @@ const Home = () => {
                 className="u--black-bg u--white"
               />
             </div>
-            <div className="stats__items">
-              {stats.map((stat, index) => (
-                <Stats key={index} {...stat} />
-              ))}
-            </div>
+            {/* STATS */}
+            <Stats className="u--white" />
           </div>
         </div>
       </section>

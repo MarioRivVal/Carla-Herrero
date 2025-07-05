@@ -1,31 +1,30 @@
-import DiseñoIcon from "../icons/diseño.svg?react";
-import PrototipadoIcon from "../icons/prototipado.svg?react";
-import SocialMediaIcon from "../icons/social-media.svg?react";
-import ConsultoriaIcon from "../icons/consultoria.svg?react";
-
 export const services = [
   {
-    title: "Diseño Multitasking",
-    description:
-      "¿Necesitas un logo? Pues olvídate, porque aquí vamos a darte tu identidad de marca al completo; tu marca se merece mucho más que un simple logotipo",
-    Icon: DiseñoIcon,
+    id: 1,
+    name: "Diseño Multitasking",
+    paragraph:
+      " Diseñamos sin límites y para todo. Branding, editorial, maquetación... Somos multitasking, somos diseño",
+    img: "diseño",
   },
   {
-    title: "Prototipado",
-    description:
-      "Si no estás presente en la red y encima de manera bonita, es como si no existieses; crea con nosotros la web que necesitas y posiciónate",
-    Icon: PrototipadoIcon,
+    id: 2,
+    name: "Prototipado & Diseño Web",
+    paragraph:
+      "  ¿Aún no estás presente en internet? Te ayudamos con esto! Tu web corporativa, coherente y funcional; a la altura de tu proyecto",
+    img: "web",
   },
   {
-    title: "Social Media",
-    description:
-      " ¿Tú tampoco tienes tiempo para invertir en tus redes? No te preocupes, delega esta parte en nosotros y obtén el contenido de calidad y las publicaciones con un orden coherente para que la gente te vea en redes",
-    Icon: SocialMediaIcon,
+    id: 3,
+    name: "Social Media Manager",
+    paragraph:
+      "Si gestionar redes sociales no es lo tuyo, no te preocupes. Crearemos y gestionaremos el contenido como si fuese nuestra cuenta propia ¡Vamos allá!",
+    img: "social",
   },
   {
-    title: "Consultoría",
-    description:
-      "Acabas de iniciar tu proyecto y no sabes cómo tomar las riendas; lo se, pero no te agobies, crearemos un plan de asesoría creativa en exclusiva para ti y a la medida de tu proyecto",
-    Icon: ConsultoriaIcon,
+    id: 2,
+    name: "Consultoría Creativa",
+    paragraph:
+      "¿Iniciándote en un proyecto y no sabes por dónde empezar? Contacta con nosotros y crearemos una mentoría personalizada que cubra todas tus necesidades creativas",
+    img: "consultoria",
   },
 ];

@@ -1,9 +1,16 @@
+.stats__items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
 .stats__item {
   display: grid;
   justify-content: center;
   padding: 2rem;
-  color: var(--white-color);
-  border: solid var(--white-color) 1px;
+  color: currentColor;
+  border: solid currentColor 1px;
 }
 
 .stats__item-value {
@@ -16,4 +23,16 @@
 .stats__item-title {
   font-size: 1.8rem;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .stats__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats__items.u--black {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

@@ -17,14 +17,14 @@ header {
 }
 
 .hero__img {
-  height: 45rem;
+  height: 100%;
 }
 
 .hero__text {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  color: var(--white-color);
+  color: currentColor;
   font-size: 1.8rem;
   text-align: center;
 }
@@ -59,11 +59,6 @@ header {
   text-align: center;
   font-size: 1.8rem;
 }
-.stats__items {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
 
 /* -------------------------------- */
 /* MEDIA QUERIES */
@@ -96,10 +91,6 @@ header {
     align-items: flex-start;
     justify-content: center;
     text-align: left;
-  }
-
-  .stats__items {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
