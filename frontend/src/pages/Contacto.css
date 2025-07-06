@@ -1,6 +1,7 @@
 .contact {
   display: grid;
   gap: 6rem;
+  padding-bottom: 4rem;
 }
 
 .contact__items-box {
@@ -55,6 +56,10 @@ h5 {
 @media (min-width: 768px) {
   h5 {
     font-size: 8rem;
+  }
+
+  .contact {
+    padding-bottom: 8rem;
   }
 
   .contact__items::after {

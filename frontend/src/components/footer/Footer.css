@@ -38,8 +38,14 @@
 }
 
 .footer__img {
-  width: 10rem;
+  width: 42%;
+  max-width: 15rem;
   height: auto;
+  margin-top: -3rem;
+}
+
+.footer__img .cls-1 {
+  fill: var(--white-color);
 }
 
 .footer__copyright {
@@ -47,6 +53,7 @@
   flex-direction: column;
   align-items: center;
   font-size: 1.4rem;
+  margin-top: -4rem;
 }
 
 .footer__legal a {

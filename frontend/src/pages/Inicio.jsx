@@ -1,6 +1,7 @@
 import "./Inicio.css";
 import { useEffect, useState } from "react";
 import { getProjects } from "../services/projectService";
+
 import Nav from "../components/nav/Nav";
 import SocialNav from "../components/socialNav/SocialNav";
 import HeaderSlider from "../components/headerSlider/HeaderSlider";

@@ -4,6 +4,8 @@ import "./Footer.css";
 
 import { getYear } from "../../utils/getYear";
 
+import LogoIcon from "../../icons/logo.svg?react";
+
 const Footer = () => {
   return (
     <div className="footer-container">
@@ -44,7 +46,7 @@ const Footer = () => {
         </ul>
       </nav>
       <div className="footer__img">
-        <img src="/img/logos/logo-w.png" />
+        <LogoIcon />
       </div>
       <div className="footer__copyright u--white">
         <p>

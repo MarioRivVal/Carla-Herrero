@@ -1,11 +1,13 @@
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
 
+import LogoIcon from "../../icons/logo.svg?react";
+
 const Nav = () => {
   return (
     <div className="navigation">
       <div className="navigation__img">
-        <img src="/img/logos/logo-r.png" />
+        <LogoIcon />
       </div>
 
       <nav className="nav">

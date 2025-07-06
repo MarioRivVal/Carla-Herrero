@@ -4,6 +4,8 @@ import Banner from "../components/banner/Banner";
 import ResponsiveImage from "../components/responsiveImage/ResponsiveImage,";
 import SocialNav from "../components/socialNav/SocialNav";
 import Button from "../components/button/Button";
+import InstagramGallery from "../components/instagramGallery/InstagramGallery";
+import Footer from "../components/footer/Footer";
 
 const Contacto = () => {
   return (
@@ -84,6 +86,14 @@ const Contacto = () => {
             </div>
           </div>
         </div>
+      </section>
+      {/* INSTAGRAM */}
+      <section>
+        <InstagramGallery />
+      </section>
+      {/* FOOTER */}
+      <section className="u--black-bg">
+        <Footer />
       </section>
     </>
   );
