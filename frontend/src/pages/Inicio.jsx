@@ -45,20 +45,20 @@ const Home = () => {
               alt="Imagen de Carla Herrero"
               className="hero__img"
             />
-            <div className="hero__text u--white">
-              <h2>Seguramente no me necesites...</h2>
-              <p>
+            <div className="hero__text">
+              <h2 className="u--white">Seguramente no me necesites...</h2>
+              <p className="u--white">
                 …Pero tu web si!. Seguramente llegues rebotado de cualquier otra
                 agencia o empresa, pero soy experta en tratar tu web como si se
                 tratase de mía propia.{" "}
               </p>
-              <p>
+              <p className="u--white">
                 El hecho de trabajar one to one y sin intermediarios e una de
                 las mayores ventajas; el mimo, el cariño y el tiempo de
                 dedicación que quizás una empresa masa grande no pueda
                 ofrecerte.
               </p>
-              <p>
+              <p className="u--white">
                 Deja a un lado el kit digital y crea conmigo la web que de
                 verdad se merece tu proyecto. Me cuentas tu idea y le damos
                 forma?
