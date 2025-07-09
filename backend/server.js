@@ -32,6 +32,14 @@ app.use(
 app.use("/api/proyectos", proyectosRoutes);
 app.use("/api/upload", uploadRoutes); // ✅ NUEVA
 
+app.use((req, res, next) => {
+  if (req.method === "GET" && !req.url.startsWith("/api")) {
+    res.sendFile(path.join(__dirname, "public", "index.html"));
+  } else {
+    next();
+  }
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
