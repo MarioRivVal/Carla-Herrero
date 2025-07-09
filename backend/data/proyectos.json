@@ -93,13 +93,24 @@
   },
   {
     "title": "Escuela Nutec",
-    "img": "project_1752059501452.jpeg",
+    "img": "project_1752076907371.jpeg",
     "services": [
       "Social media manager",
       "Servicios de marketing",
       "Desarrollo web"
     ],
     "best": false,
-    "id": 1752059501814
+    "id": 1752076907451
+  },
+  {
+    "title": "Centro de Estudios Múltiples Dentales",
+    "img": "project_1752077053936.jpeg",
+    "services": [
+      "social media manager",
+      "servicios de marketing",
+      "desarrollo web"
+    ],
+    "best": false,
+    "id": 1752077054005
   }
 ]

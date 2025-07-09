@@ -61,6 +61,17 @@ router.put("/:id", (req, res) => {
     if (index === -1)
       return res.status(404).json({ error: "Proyecto no encontrado" });
 
+    if (req.body.oldImg && req.body.oldImg !== projects[index].img) {
+      const oldImagePath = path.join(
+        __dirname,
+        "../public/img/projects",
+        req.body.oldImg
+      );
+      if (fs.existsSync(oldImagePath)) {
+        fs.unlinkSync(oldImagePath);
+      }
+    }
+
     projects[index] = { ...projects[index], ...req.body };
     writeProjects(projects);
     res.json(projects[index]);

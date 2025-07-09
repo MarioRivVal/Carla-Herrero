@@ -5,6 +5,12 @@
   font-family: sans-serif;
 }
 
+.limit-alert {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
 .project-form {
   display: flex;
   flex-direction: column;
@@ -69,6 +75,11 @@
   max-width: 120px;
   border-radius: 5px;
   border: 1px solid #ccc;
+}
+
+.admin-btns {
+  display: flex;
+  gap: 2rem;
 }
 
 /* checkbox */

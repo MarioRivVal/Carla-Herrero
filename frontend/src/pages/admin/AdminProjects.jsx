@@ -59,9 +59,17 @@ const AdminProjects = () => {
   };
 
   const handleAddOrUpdateProject = async () => {
-    const currentBestCount = projects.filter((p) => p.best).length;
-    if (projects.length >= MAX_PROJECTS && !editingProjectId) return;
-    if (newProject.best && currentBestCount >= MAX_BEST && !editingProjectId) {
+    const realBestCount = projects.filter((p) => p.best).length;
+    const wasBestBefore = editingProjectId
+      ? projects.find((p) => p.id === editingProjectId)?.best
+      : false;
+
+    const adjustedBestCount =
+      realBestCount -
+      (wasBestBefore && !newProject.best ? 1 : 0) +
+      (!wasBestBefore && newProject.best ? 1 : 0);
+
+    if (newProject.best && adjustedBestCount > MAX_BEST && !editingProjectId) {
       alert("Máximo de 6 proyectos destacados alcanzado");
       return;
     }
@@ -75,13 +83,21 @@ const AdminProjects = () => {
       return;
     }
 
+    if (!selectedFile && !editingProjectId) {
+      alert("Por favor, selecciona una imagen para el proyecto.");
+      return;
+    }
+
     if (cleanedServices.length === 0) {
       alert("Debes añadir al menos un servicio.");
       return;
     }
 
     let imageName = newProject.img;
+    let oldImageToDelete = null;
+
     if (selectedFile) {
+      oldImageToDelete = newProject.img; // guardar la anterior
       imageName = generateImageName(selectedFile.name);
       const formData = new FormData();
       formData.append("image", selectedFile, imageName);
@@ -99,6 +115,7 @@ const AdminProjects = () => {
       ...newProject,
       services: cleanedServices,
       img: imageName,
+      ...(selectedFile && editingProjectId && { oldImg: oldImageToDelete }), // importante
     };
 
     try {
@@ -149,18 +166,32 @@ const AdminProjects = () => {
     });
     setEditingProjectId(project.id);
     if (fileInputRef.current) fileInputRef.current.value = "";
+
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
+  const formRef = useRef(null);
   const fileInputRef = useRef(null);
-  const currentBestCount = projects.filter((p) => p.best).length;
-  const canAddBest = currentBestCount < MAX_BEST || newProject.best;
+  const realBestCount = projects.filter((p) => p.best).length;
+  const wasBestBefore = editingProjectId
+    ? projects.find((p) => p.id === editingProjectId)?.best
+    : false;
+
+  const adjustedBestCount =
+    realBestCount -
+    (wasBestBefore && !newProject.best ? 1 : 0) +
+    (!wasBestBefore && newProject.best ? 1 : 0);
+
+  const canAddBest = adjustedBestCount < MAX_BEST;
 
   return (
     <div className="admin-wrapper">
       <h2>Panel de Administración de Proyectos</h2>
 
       {projects.length < MAX_PROJECTS || editingProjectId ? (
-        <div className="project-form">
+        <div className="project-form" ref={formRef}>
           <div className="input-group">
             <label htmlFor="name">Nombre Proyecto</label>
             <input
@@ -218,7 +249,7 @@ const AdminProjects = () => {
 
           <div className="input-group destacado-group">
             <label htmlFor="best">
-              Destacado {currentBestCount}/{MAX_BEST}
+              Destacado {adjustedBestCount}/{MAX_BEST}
             </label>
 
             {canAddBest || newProject.best ? (
@@ -245,7 +276,7 @@ const AdminProjects = () => {
           />
         </div>
       ) : (
-        <p>Has alcanzado el máximo de 12 proyectos.</p>
+        <p className="limit-alert">Has alcanzado el máximo de 12 proyectos.</p>
       )}
 
       <div className="projects-list">
@@ -267,16 +298,18 @@ const AdminProjects = () => {
             <p>
               <span>Destacado:</span> {project.best ? "Sí" : "No"}
             </p>
-            <Button
-              text="Editar"
-              className="u--white-bg u--red"
-              onClick={() => handleEdit(project)}
-            />
-            <Button
-              text="Eliminar"
-              className="u--red-bg u--white"
-              onClick={() => handleDelete(project.id)}
-            />
+            <div className="admin-btns">
+              <Button
+                text="Editar"
+                className="u--white-bg u--red"
+                onClick={() => handleEdit(project)}
+              />
+              <Button
+                text="Eliminar"
+                className="u--red-bg u--white"
+                onClick={() => handleDelete(project.id)}
+              />
+            </div>
           </div>
         ))}
       </div>
