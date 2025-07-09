@@ -4,7 +4,8 @@ const path = require("path");
 const app = express();
 
 const proyectosRoutes = require("./routes/proyectos");
-const uploadRoutes = require("./routes/upload"); // ✅ NUEVO
+const uploadRoutes = require("./routes/upload");
+const authRoutes = require("./routes/auth");
 
 const allowedOrigins = [
   "http://localhost:5173",
@@ -30,7 +31,8 @@ app.use(
 
 // Rutas
 app.use("/api/proyectos", proyectosRoutes);
-app.use("/api/upload", uploadRoutes); // ✅ NUEVA
+app.use("/api/upload", uploadRoutes);
+app.use("/api/auth", authRoutes);
 
 app.use((req, res, next) => {
   if (req.method === "GET" && !req.url.startsWith("/api")) {

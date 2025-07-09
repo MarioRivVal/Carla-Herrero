@@ -1,16 +1,32 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 import ScrollToTopButton from "./components/scrollToTopButton/ScrollToTopButton";
 
-import AdminProjects from "./pages/admin/AdminProjects";
 import Inicio from "./pages/Inicio";
 import Servicios from "./pages/Servicios";
 import Contacto from "./pages/Contacto";
 import Proyectos from "./pages/Proyectos";
 import Politicas from "./pages/Politicas";
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminProjects from "./pages/admin/AdminProjects";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    localStorage.getItem("admin") === "true"
+  );
+
+  // ✅ Escucha los cambios de almacenamiento para actualizar login
+  useEffect(() => {
+    const syncLogin = () => {
+      setIsLoggedIn(localStorage.getItem("admin") === "true");
+    };
+
+    window.addEventListener("storage", syncLogin);
+    return () => window.removeEventListener("storage", syncLogin);
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>
@@ -19,8 +35,19 @@ function App() {
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/proyectos" element={<Proyectos />} />
         <Route path="/politicas" element={<Politicas />} />
-        <Route path="/admin/proyectos" element={<AdminProjects />} />
+
+        {/* Página de login */}
+        <Route path="/admin" element={<AdminLogin />} />
+
+        {/* Panel protegido */}
+        <Route
+          path="/admin/proyectos"
+          element={
+            isLoggedIn ? <AdminProjects /> : <Navigate to="/admin" replace />
+          }
+        />
       </Routes>
+
       <ScrollToTopButton />
     </BrowserRouter>
   );
