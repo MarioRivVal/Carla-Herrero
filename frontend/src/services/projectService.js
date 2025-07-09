@@ -12,3 +12,16 @@ export const getProjects = async () => {
     return [];
   }
 };
+
+export const createProject = async (projectData) => {
+  return axios.post(API_URL, projectData);
+};
+
+export const updateProject = async (id, projectData) => {
+  return axios.put(`${API_URL}/${id}`, projectData);
+};
+
+export const deleteProject = async (id) => {
+  console.log(id);
+  return axios.delete(`${API_URL}/${id}`);
+};

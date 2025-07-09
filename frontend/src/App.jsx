@@ -3,6 +3,7 @@ import "./App.css";
 
 import ScrollToTopButton from "./components/scrollToTopButton/ScrollToTopButton";
 
+import AdminProjects from "./pages/admin/AdminProjects";
 import Inicio from "./pages/Inicio";
 import Servicios from "./pages/Servicios";
 import Contacto from "./pages/Contacto";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/proyectos" element={<Proyectos />} />
         <Route path="/politicas" element={<Politicas />} />
+        <Route path="/admin/proyectos" element={<AdminProjects />} />
       </Routes>
       <ScrollToTopButton />
     </BrowserRouter>

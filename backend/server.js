@@ -1,20 +1,24 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const app = express();
+
 const proyectosRoutes = require("./routes/proyectos");
+const uploadRoutes = require("./routes/upload"); // ✅ NUEVO
 
 const allowedOrigins = [
   "http://localhost:5173",
   "https://carla-herrero.netlify.app",
 ];
 
-app.use(cors());
 app.use(express.json());
+
+// Servir imágenes públicas
+app.use("/img", express.static(path.join(__dirname, "public/img")));
 
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Permite requests sin origen (como Postman) o desde los orígenes permitidos
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
@@ -24,7 +28,9 @@ app.use(
   })
 );
 
+// Rutas
 app.use("/api/proyectos", proyectosRoutes);
+app.use("/api/upload", uploadRoutes); // ✅ NUEVA
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

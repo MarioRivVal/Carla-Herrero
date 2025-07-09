@@ -8,6 +8,10 @@ const PresentationCard = ({ item, className, type = "" }) => {
   const [ref, isVisible] = useScrollReveal(0.95);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
+  const API_URL = import.meta.env.PROD
+    ? import.meta.env.VITE_API_URL
+    : import.meta.env.VITE_LOCAL_BACKEND_URL;
+
   useEffect(() => {
     const match = window.matchMedia("(hover: none) and (pointer: coarse)");
     setIsTouchDevice(match.matches);
@@ -49,7 +53,7 @@ const PresentationCard = ({ item, className, type = "" }) => {
       >
         <div className="presentation-card__img">
           <img
-            src={`/img/projects/${item.img}`}
+            src={`${API_URL}/img/projects/${item.img}`}
             alt={item.name}
             loading="lazy"
           />

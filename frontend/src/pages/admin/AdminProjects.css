@@ -1,0 +1,126 @@
+.admin-wrapper {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 4rem auto;
+  font-family: sans-serif;
+}
+
+.project-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.input-group {
+  width: 100%;
+  border: solid 1px var(--primary-color);
+  padding: 2rem;
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+}
+
+.input-group a {
+  justify-self: center;
+}
+
+.project-form input {
+  display: block;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.4rem;
+}
+
+.projects-list {
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+.project-item {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.project-item button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 80px;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.image-preview {
+  margin-top: 1rem;
+}
+
+.image-preview img {
+  max-width: 120px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* checkbox */
+.destacado-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkbox-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.checkbox-wrapper input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 28px;
+  width: 28px;
+  background-color: #eee;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.checkbox-wrapper input:checked + .custom-checkbox {
+  background-color: var(--primary-color);
+}
+
+.custom-checkbox::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 7px;
+  top: 3px;
+  width: 8px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-wrapper input:checked + .custom-checkbox::after {
+  display: block;
+}
