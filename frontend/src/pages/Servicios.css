@@ -6,3 +6,53 @@
   justify-items: center;
   margin: 0 auto;
 }
+
+.modal-content {
+  display: grid;
+  gap: 4rem;
+  padding: 6rem 2rem 2rem 2rem;
+}
+
+.modal-content h2 {
+}
+
+.modal-service__img {
+  border: solid 2px var(--primary-color);
+  height: 100%;
+}
+
+.modal-content .u--grid-2 {
+  gap: 2rem;
+}
+
+.modal-service__description div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.modal-service__description {
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  align-content: space-between;
+  height: 100%;
+}
+
+.modal-service__description p {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    display: grid;
+    gap: 4rem;
+    padding: 6rem 4rem 4rem 4rem;
+  }
+
+  .modal-content h2 {
+    text-align: center;
+    font-size: 4.4rem;
+  }
+}

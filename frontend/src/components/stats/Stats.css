@@ -10,7 +10,7 @@
   justify-content: center;
   padding: 2rem;
   color: currentColor;
-  border: solid currentColor 1px;
+  border: solid currentColor 0.2rem;
 }
 
 .stats__item-value {

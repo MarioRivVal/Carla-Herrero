@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./App.css";
 
-import ScrollToTopButton from "./components/scrollToTopButton/ScrollToTopButton";
+import ScrollButtonsGroup from "./components/scrollButtonsGroup/scrollButtonsGroup";
 
 import Inicio from "./pages/Inicio";
 import Servicios from "./pages/Servicios";
@@ -48,7 +48,7 @@ function App() {
         />
       </Routes>
 
-      <ScrollToTopButton />
+      <ScrollButtonsGroup />
     </BrowserRouter>
   );
 }

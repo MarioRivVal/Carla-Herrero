@@ -35,7 +35,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  color: var(--white-color);
+  color: var(--primary-color);
   font-size: clamp(3.4rem, 7vw, 8rem);
   pointer-events: none;
   white-space: pre-wrap;

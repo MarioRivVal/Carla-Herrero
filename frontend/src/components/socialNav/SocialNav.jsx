@@ -27,7 +27,11 @@ const SocialNav = () => {
           </a>
         </li>
         <li>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.facebook.com/profile.php?id=61551718752845"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FacebookIcon width={36} height={36} />
           </a>
         </li>

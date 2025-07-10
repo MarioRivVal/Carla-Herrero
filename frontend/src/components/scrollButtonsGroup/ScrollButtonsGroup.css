@@ -1,0 +1,61 @@
+.scroll-button {
+  position: fixed;
+  bottom: 2rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  border: none;
+
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.scroll-button.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Posiciones distintas */
+.scroll-top {
+  right: 2rem;
+  background-color: var(--primary-color);
+}
+
+.scroll-whatsapp {
+  left: 2rem;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+/* Iconos */
+.scroll-whatsapp svg {
+  width: 6rem;
+  height: 6rem;
+}
+
+.scroll-top svg {
+  transform: rotate(90deg);
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.scroll-top svg path {
+  stroke: var(--white-color);
+}
+
+/* Animación */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}

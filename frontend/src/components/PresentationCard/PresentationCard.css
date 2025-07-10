@@ -1,7 +1,7 @@
 .presentation-card {
   position: relative;
   overflow: hidden;
-  border: solid var(--primary-color) 2px;
+  border: solid var(--primary-color) 0.2rem;
 }
 
 .presentation-card__img {

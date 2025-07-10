@@ -3,8 +3,9 @@ import "./PresentationCard.css";
 import useScrollReveal from "../../hooks/useScrollReveal";
 
 import Button from "../button/Button";
+import ArrowTurnIcon from "../../icons/arrow-turn.svg?react";
 
-const PresentationCard = ({ item, className, type = "" }) => {
+const PresentationCard = ({ item, className, type = "", onClick }) => {
   const [ref, isVisible] = useScrollReveal(0.95);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
@@ -39,6 +40,7 @@ const PresentationCard = ({ item, className, type = "" }) => {
             text="Saber más"
             to=""
             className="presentation__btn u--red-bg u--white"
+            onClick={onClick}
           />
         </div>
       </div>
