@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./App.css";
 
-import ScrollButtonsGroup from "./components/scrollButtonsGroup/scrollButtonsGroup";
+import ScrollButtonsGroup from "./components/scrollButtonsGroup/ScrollButtonsGroup";
 
 import Inicio from "./pages/Inicio";
 import Servicios from "./pages/Servicios";

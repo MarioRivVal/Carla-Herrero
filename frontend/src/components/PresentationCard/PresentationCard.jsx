@@ -3,7 +3,7 @@ import "./PresentationCard.css";
 import useScrollReveal from "../../hooks/useScrollReveal";
 
 import Button from "../button/Button";
-import ArrowTurnIcon from "../../icons/arrow-turn.svg?react";
+// import ArrowTurnIcon from "../../icons/arrow-turn.svg?react";
 
 const PresentationCard = ({ item, className, type = "", onClick }) => {
   const [ref, isVisible] = useScrollReveal(0.95);
