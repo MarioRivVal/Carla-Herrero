@@ -9,7 +9,8 @@ const authRoutes = require("./routes/auth");
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://carla-herrero.netlify.app",
+  // "https://carla-herrero.netlify.app",
+  "https://carla-herrero.onrender.com",
 ];
 
 app.use(express.json());
