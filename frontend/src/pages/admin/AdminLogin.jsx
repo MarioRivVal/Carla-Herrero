@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+import Button from "../../components/button/Button";
+
 const AdminLogin = () => {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
@@ -57,6 +59,12 @@ const AdminLogin = () => {
         <button type="submit" className="button u--red-bg u--white">
           Iniciar sesión
         </button>
+
+        <Button
+          text="Cambiar contraseña"
+          to="/admin/cambiar-clave"
+          className="u--black-bg u--white"
+        />
       </form>
     </div>
   );

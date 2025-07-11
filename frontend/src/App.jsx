@@ -11,6 +11,7 @@ import Proyectos from "./pages/Proyectos";
 import Politicas from "./pages/Politicas";
 import AdminLogin from "./pages/admin/AdminLogin";
 import AdminProjects from "./pages/admin/AdminProjects";
+import ChangePassword from "./pages/admin/ChangePassword";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(
@@ -39,11 +40,16 @@ function App() {
         {/* Página de login */}
         <Route path="/admin" element={<AdminLogin />} />
 
-        {/* Panel protegido */}
         <Route
           path="/admin/proyectos"
           element={
             isLoggedIn ? <AdminProjects /> : <Navigate to="/admin" replace />
+          }
+        />
+        <Route
+          path="/admin/cambiar-clave"
+          element={
+            isLoggedIn ? <ChangePassword /> : <Navigate to="/admin" replace />
           }
         />
       </Routes>
