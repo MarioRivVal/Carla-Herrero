@@ -21,6 +21,7 @@ const Home = () => {
 
   useEffect(() => {
     getProjects().then((data) => {
+      console.log(data);
       const filtered = data.filter((p) => p.best);
       setProjects(filtered);
     });

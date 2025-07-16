@@ -12,7 +12,10 @@ const Proyectos = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    getProjects().then((data) => setProjects(data));
+    getProjects().then((data) => {
+      setProjects(data);
+      console.log(data);
+    });
   }, []);
 
   return (
