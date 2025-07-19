@@ -1,7 +1,7 @@
 export const stats = [
   {
     title: "Proyectos Creativos",
-    value: "75",
+    value: "+75",
   },
   {
     title: "Años asesorando",
@@ -9,7 +9,7 @@ export const stats = [
   },
   {
     title: "Empresas asesoradas",
-    value: "12",
+    value: "+12",
   },
   {
     title: "Cafés",

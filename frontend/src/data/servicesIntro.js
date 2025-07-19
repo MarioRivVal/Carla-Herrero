@@ -25,7 +25,7 @@ export const servicesIntro = [
   {
     title: "Consultoría",
     description:
-      "Acabas de iniciar tu proyecto y no sabes cómo tomar las riendas; lo se, pero no te agobies, crearemos un plan de asesoría creativa en exclusiva para ti y a la medida de tu proyecto",
+      "Acabas de iniciar tu proyecto y no sabes cómo tomar las riendas; lo sé, pero no te agobies, crearemos un plan de asesoría creativa en exclusiva para ti y a la medida de tu proyecto",
     Icon: ConsultoriaIcon,
   },
 ];

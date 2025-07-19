@@ -55,7 +55,7 @@ const Footer = () => {
         </p>
         <p>Todos los derechos reservados</p>
         <p className="footer__legal">
-          <NavLink to="/politicas">Politicas de uso</NavLink>
+          <NavLink to="/politicas">Políticas de uso</NavLink>
         </p>
         <p>
           Desarrollado con pasión por{" "}

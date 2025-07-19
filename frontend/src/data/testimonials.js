@@ -3,7 +3,7 @@ export const testimonials = [
     id: 1,
     author: "Álvaro Bordas",
     company: "Fundador de BDS Hospitality",
-    text: "Conocer el trabajo de byCarlaHerrero ha sido abrirse a una profesional llena de creatividad y estilo. Su habilidad para combinar diseño con guiños a la moda es excepcional. Carla genera desde su profesionalidad y cercanía historias visuales únicas. Su atención al detalle y pasión por el arte y moda son evidentes en cada proyecto que hemos compartido. Si estás buscando una diseñadora que eleve tus expectativas y transporte al próximo nivel la identidad visual de tu proyecto, by Carla Herrero es la elección perfecta ",
+    text: "Conocer el trabajo de byCarlaHerrero ha sido abrirse a una profesional llena de creatividad y estilo. Su habilidad para combinar diseño con guiños a la moda es excepcional. Carla genera desde su profesionalidad y cercanía historias visuales únicas. Su atención al detalle y pasión por el arte y moda son evidentes en cada proyecto que hemos compartido. Si estás buscando una diseñadora que eleve tus expectativas y transporte al próximo nivel la identidad visual de tu proyecto, by Carla Herrero es la elección perfecta.",
   },
   {
     id: 2,

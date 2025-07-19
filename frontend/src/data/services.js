@@ -3,14 +3,14 @@ export const services = [
     id: 1,
     name: "Diseño Multitasking",
     description:
-      " Diseñamos sin límites y para todo. Branding, editorial, maquetación... Somos multitasking, somos diseño",
+      " Diseñamos sin límites y para todo. Branding, editorial, maquetación... Somos multitasking, somos diseño.",
     img: "diseño",
   },
   {
     id: 2,
     name: "Prototipado & Diseño Web",
     description:
-      "  ¿Aún no estás presente en internet? Te ayudamos con esto! Tu web corporativa, coherente y funcional; a la altura de tu proyecto",
+      "  ¿Aún no estás presente en internet? Te ayudamos con esto! Tu web corporativa, coherente y funcional; a la altura de tu proyecto.",
     img: "web",
   },
   {
@@ -24,7 +24,7 @@ export const services = [
     id: 2,
     name: "Consultoría Creativa",
     description:
-      "¿Iniciándote en un proyecto y no sabes por dónde empezar? Contacta con nosotros y crearemos una mentoría personalizada que cubra todas tus necesidades creativas",
+      "¿Iniciándote en un proyecto y no sabes por dónde empezar? Contacta con nosotros y crearemos una mentoría personalizada que cubra todas tus necesidades creativas.",
     img: "consultoria",
   },
 ];

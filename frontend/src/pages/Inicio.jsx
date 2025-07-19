@@ -21,7 +21,6 @@ const Home = () => {
 
   useEffect(() => {
     getProjects().then((data) => {
-      console.log(data);
       const filtered = data.filter((p) => p.best);
       setProjects(filtered);
     });
@@ -49,19 +48,18 @@ const Home = () => {
             <div className="hero__text">
               <h2 className="u--white">Seguramente no me necesites...</h2>
               <p className="u--white">
-                …Pero tu web si!. Seguramente llegues rebotado de cualquier otra
+                …Pero tu web sí ! Seguramente llegues rebotado de cualquier otra
                 agencia o empresa, pero soy experta en tratar tu web como si se
-                tratase de mía propia.{" "}
+                tratase de la mía propia.{" "}
               </p>
               <p className="u--white">
-                El hecho de trabajar one to one y sin intermediarios e una de
+                El hecho de trabajar one to one y sin intermediarios es una de
                 las mayores ventajas; el mimo, el cariño y el tiempo de
-                dedicación que quizás una empresa masa grande no pueda
-                ofrecerte.
+                dedicación que quizás una empresa más grande no pueda ofrecerte.
               </p>
               <p className="u--white">
                 Deja a un lado el kit digital y crea conmigo la web que de
-                verdad se merece tu proyecto. Me cuentas tu idea y le damos
+                verdad se merece tu proyecto. ¿Me cuentas tu idea y le damos
                 forma?
               </p>
             </div>
@@ -89,7 +87,7 @@ const Home = () => {
           </div>
           <div className="btns-box">
             <Button
-              text="Envia un whatsapp"
+              text="Envía un whatsapp"
               to={`https://wa.me/${telephoneNumber}`}
               className="u--red-bg u--white"
             />
@@ -108,8 +106,8 @@ const Home = () => {
           <div className="title-box">
             <h2>Servicios 100% Personalizados</h2>
             <p>
-              En by Carla Herrero estaremos encantados de darte la respuesta
-              creativa que necesites, esto es todo lo que hacemos
+              En "by Carla Herrero" estaremos encantados de darte la respuesta
+              creativa que necesites, esto es todo lo que hacemos.
             </p>
           </div>
           <div className="u--grid-4">
@@ -150,7 +148,7 @@ const Home = () => {
                 calidad.
               </p>
               <Button
-                text="Envia un whatsapp"
+                text="Envía un whatsapp"
                 to={`https://wa.me/${telephoneNumber}`}
                 className="u--black-bg u--white"
               />

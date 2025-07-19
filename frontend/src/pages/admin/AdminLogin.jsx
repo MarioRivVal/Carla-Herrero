@@ -60,11 +60,11 @@ const AdminLogin = () => {
           Iniciar sesión
         </button>
 
-        <Button
+        {/* <Button
           text="Cambiar contraseña"
           to="/admin/cambiar-clave"
           className="u--black-bg u--white"
-        />
+        /> */}
       </form>
     </div>
   );

@@ -1,0 +1,45 @@
+.policy-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem;
+}
+
+.policy-section {
+  max-width: 900px;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.policy-section h2,
+.policy-section h3 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.policy-section p {
+  margin-bottom: 1rem;
+}
+
+.policy-section ul {
+  margin-left: 2rem;
+  list-style: disc;
+}
+
+.cookies-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.cookies-table th,
+.cookies-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.cookies-table th {
+  background: #f0f0f0;
+}

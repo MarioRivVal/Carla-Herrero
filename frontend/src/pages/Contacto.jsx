@@ -27,19 +27,19 @@ const Contacto = () => {
               className="hero__img"
             />
             <div className="hero__text u--black">
-              <h2>Quien soy...</h2>
+              <h2>Quién soy...</h2>
               <p>
                 Soy Carla, de by Carla Herrero y llevo gestionando redes
-                sociales y creando contenido para ellas más de 4 años
+                sociales y creando contenido para ellas más de 4 años.
               </p>
               <p>
                 Además, creo identidades para marcas nuevas o les doy un aire
                 nuevo a marcas que ya existen y quieren darles ese punch a su
-                imagen
+                imagen.
               </p>
               <p>
-                Diseño también tu web, y te ayudo que tu proyecto tenga la
-                presencia online que se merece
+                Diseño también tu web, y te ayudo a que tu proyecto tenga la
+                presencia online que se merece.
               </p>
               <p>
                 Si sientes que no tienes tiempo, que crear contenido no es lo

@@ -48,7 +48,7 @@ const Servicios = () => {
 
           <Stats className="u--black" />
           <Button
-            text="Envia un whatsapp"
+            text="Envía un whatsapp"
             to={`https://wa.me/${telephoneNumber}`}
             className="u--red-bg u--white"
           />
