@@ -13,15 +13,26 @@ import AdminLogin from "./pages/admin/AdminLogin";
 import AdminProjects from "./pages/admin/AdminProjects";
 import ChangePassword from "./pages/admin/ChangePassword";
 
+const isAdminValid = () => {
+  const isAdmin = localStorage.getItem("admin") === "true";
+  const expiration = parseInt(localStorage.getItem("admin_expire"), 10);
+  const now = new Date().getTime();
+
+  if (!isAdmin || !expiration || now > expiration) {
+    localStorage.removeItem("admin");
+    localStorage.removeItem("admin_expire");
+    return false;
+  }
+  return true;
+};
+
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(
-    localStorage.getItem("admin") === "true"
-  );
+  const [isLoggedIn, setIsLoggedIn] = useState(isAdminValid());
 
   // ✅ Escucha los cambios de almacenamiento para actualizar login
   useEffect(() => {
     const syncLogin = () => {
-      setIsLoggedIn(localStorage.getItem("admin") === "true");
+      setIsLoggedIn(isAdminValid());
     };
 
     window.addEventListener("storage", syncLogin);
@@ -38,7 +49,10 @@ function App() {
         <Route path="/politicas" element={<Politicas />} />
 
         {/* Página de login */}
-        <Route path="/admin" element={<AdminLogin />} />
+        <Route
+          path="/admin"
+          element={isLoggedIn ? <AdminProjects /> : <AdminLogin />}
+        />
 
         <Route
           path="/admin/proyectos"

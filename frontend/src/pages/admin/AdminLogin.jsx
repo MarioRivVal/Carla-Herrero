@@ -25,8 +25,10 @@ const AdminLogin = () => {
       });
 
       if (res.data.success) {
-        // ✅ GUARDAMOS LOGIN EN LOCALSTORAGE
         localStorage.setItem("admin", "true");
+        // Fecha de expiración (30 minutos)
+        const expiration = new Date().getTime() + 30 * 60 * 1000;
+        localStorage.setItem("admin_expire", expiration.toString());
         window.dispatchEvent(new Event("storage"));
         navigate("/admin/proyectos");
       }
@@ -56,9 +58,20 @@ const AdminLogin = () => {
 
         {error && <p style={{ color: "red" }}>{error}</p>}
 
-        <button type="submit" className="button u--red-bg u--white">
-          Iniciar sesión
-        </button>
+        <div className="admin-btns">
+          <button type="submit" className="button u--red-bg u--white">
+            Iniciar sesión
+          </button>
+          <Button
+            text="Home"
+            to=""
+            className="u--white-bg u--black"
+            onClick={() => {
+              navigate("/");
+              window.location.reload();
+            }}
+          />
+        </div>
 
         {/* <Button
           text="Cambiar contraseña"

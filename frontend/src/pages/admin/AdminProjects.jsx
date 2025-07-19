@@ -1,5 +1,6 @@
 import "./AdminProjects.css";
 import { useEffect, useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   getProjects,
   createProject,
@@ -20,6 +21,7 @@ const AdminProjects = () => {
   });
   const [selectedFile, setSelectedFile] = useState(null);
   const [editingProjectId, setEditingProjectId] = useState(null);
+  const navigate = useNavigate();
 
   const MAX_PROJECTS = 12;
   const MAX_SERVICES = 5;
@@ -278,6 +280,28 @@ const AdminProjects = () => {
       ) : (
         <p className="limit-alert">Has alcanzado el máximo de 12 proyectos.</p>
       )}
+      <div className="admin-btns">
+        <Button
+          text="Cerrar sesión"
+          to=""
+          className="u--white-bg u--black"
+          onClick={() => {
+            localStorage.removeItem("admin");
+            localStorage.removeItem("admin_expire");
+            navigate("/admin");
+            window.location.reload();
+          }}
+        />
+        <Button
+          text="Home"
+          to=""
+          className="u--white-bg u--black"
+          onClick={() => {
+            navigate("/");
+            window.location.reload();
+          }}
+        />
+      </div>
 
       <div className="projects-list">
         {projects.map((project) => (
