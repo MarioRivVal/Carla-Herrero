@@ -13,9 +13,6 @@
   padding: 6rem 2rem 2rem 2rem;
 }
 
-.modal-content h2 {
-}
-
 .modal-service__img {
   border: solid 2px var(--primary-color);
   height: 100%;
@@ -45,11 +42,10 @@
 }
 
 @media (min-width: 768px) {
-  .modal-content {
-    display: grid;
-    gap: 4rem;
-    padding: 6rem 4rem 4rem 4rem;
-  }
+  /* .modal-content {
+    height: 100%;
+    align-content: center;
+  } */
 
   .modal-content h2 {
     text-align: center;

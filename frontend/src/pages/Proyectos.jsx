@@ -21,7 +21,14 @@ const Proyectos = () => {
       <section className="u--red-bg">
         <Banner
           title={"Proyectos"}
-          paragraph={"Aquí te enseño un poco la manera en la que trabajo"}
+          paragraph={
+            <>
+              Aquí te enseño un poco{" "}
+              <span className="u--strong-text">
+                la manera en la que trabajo
+              </span>
+            </>
+          }
         />
       </section>
       {/* ALL PROJECTS */}

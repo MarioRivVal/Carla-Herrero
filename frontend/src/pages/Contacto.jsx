@@ -14,7 +14,12 @@ const Contacto = () => {
       <section className="u--red-bg">
         <Banner
           title={"Contacto"}
-          paragraph={"Prometo contestarte lo antes posible"}
+          paragraph={
+            <>
+              Prometo contestarte{" "}
+              <span className="u--strong-text">lo antes posible.</span>
+            </>
+          }
         />
       </section>
       <section>
@@ -29,22 +34,33 @@ const Contacto = () => {
             <div className="hero__text u--black">
               <h2>Quién soy...</h2>
               <p>
-                Soy Carla, de by Carla Herrero y llevo gestionando redes
-                sociales y creando contenido para ellas más de 4 años.
+                Soy Carla, de{" "}
+                <span className="u--cursive-text u--red">by Carla Herrero</span>{" "}
+                y llevo{" "}
+                <span className="u--strong-text">
+                  gestionando redes sociales
+                </span>{" "}
+                y creando contenido para ellas más de 4 años.
               </p>
               <p>
-                Además, creo identidades para marcas nuevas o les doy un aire
-                nuevo a marcas que ya existen y quieren darles ese punch a su
-                imagen.
+                Además,{" "}
+                <span className="u--strong-text">
+                  creo identidades para marcas nuevas
+                </span>{" "}
+                o les doy un aire nuevo a marcas que ya existen y quieren darles
+                ese punch a su imagen.
               </p>
               <p>
-                Diseño también tu web, y te ayudo a que tu proyecto tenga la
-                presencia online que se merece.
+                <span className="u--strong-text">Diseño también tu web,</span> y
+                te ayudo a que tu proyecto tenga la presencia online que se
+                merece.
               </p>
               <p>
                 Si sientes que no tienes tiempo, que crear contenido no es lo
-                tuyo, o que simplemente no te apetece, ¡soy la solución a tus
-                problemas!
+                tuyo, o que simplemente no te apetece,{" "}
+                <span className="u--strong-text">
+                  ¡soy la solución a tus problemas!
+                </span>
               </p>
             </div>
           </div>
@@ -72,7 +88,7 @@ const Contacto = () => {
             </div>
 
             <div className="contact__items">
-              <p>Siempre con cita previa</p>
+              <p className="u--strong-text">Siempre con cita previa</p>
               <div className="contact__address">
                 <p>Centro de Empresas La Curtidora</p>
                 <p>Avilés</p>

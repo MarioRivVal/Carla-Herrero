@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./PresentationCard.css";
 import useScrollReveal from "../../hooks/useScrollReveal";
+import ResponsiveImage from "../responsiveImage/ResponsiveImage,";
 
 import Button from "../button/Button";
 // import ArrowTurnIcon from "../../icons/arrow-turn.svg?react";
@@ -27,10 +28,11 @@ const PresentationCard = ({ item, className, type = "", onClick }) => {
         }`}
       >
         <div className="presentation-card__img">
-          <img
-            src={`/img/services/${item.img}-1.png`}
-            alt={item.name}
-            loading="lazy"
+          <ResponsiveImage
+            name={`services/${item.img}-1`}
+            ext="jpeg"
+            alt=""
+            className=""
           />
         </div>
 
@@ -65,8 +67,7 @@ const PresentationCard = ({ item, className, type = "", onClick }) => {
           <h4>{item.title}</h4>
           {item.services.map((service, i) => (
             <p key={i} className="presentation-card__service">
-              <span className="u--red">- </span> {service}{" "}
-              <span className="u--red"> -</span>
+              <span className="u--red">- {service} -</span>
             </p>
           ))}
         </div>

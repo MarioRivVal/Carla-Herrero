@@ -48,19 +48,23 @@ const Home = () => {
             <div className="hero__text">
               <h2 className="u--white">Seguramente no me necesites...</h2>
               <p className="u--white">
-                …Pero tu web sí ! Seguramente llegues rebotado de cualquier otra
+                …¡Pero tu web sí! Seguramente llegues rebotado de cualquier otra
                 agencia o empresa, pero soy experta en tratar tu web como si se
                 tratase de la mía propia.{" "}
               </p>
               <p className="u--white">
-                El hecho de trabajar one to one y sin intermediarios es una de
+                El hecho de trabajar{" "}
+                <span className="u--cursive-text">one to one</span> y sin{" "}
+                <span className="u--strong-text">intermediarios</span> es una de
                 las mayores ventajas; el mimo, el cariño y el tiempo de
                 dedicación que quizás una empresa más grande no pueda ofrecerte.
               </p>
               <p className="u--white">
                 Deja a un lado el kit digital y crea conmigo la web que de
-                verdad se merece tu proyecto. ¿Me cuentas tu idea y le damos
-                forma?
+                verdad se merece tu proyecto.{" "}
+                <span className="u--strong-text">
+                  ¿Me cuentas tu idea y le damos forma?
+                </span>
               </p>
             </div>
           </div>
@@ -72,7 +76,8 @@ const Home = () => {
           <div className="title-box">
             <h2>Estas marcas ya han dado el paso</h2>
             <p>
-              ¿Sabías que nunca has estado tan cerca de alcanzar la imagen ideal
+              ¿Sabías que nunca has estado tan cerca de{" "}
+              <span className="u--strong-text">alcanzar la imagen ideal </span>{" "}
               para tu negocio?
             </p>
           </div>
@@ -106,8 +111,13 @@ const Home = () => {
           <div className="title-box">
             <h2>Servicios 100% Personalizados</h2>
             <p>
-              En "by Carla Herrero" estaremos encantados de darte la respuesta
-              creativa que necesites, esto es todo lo que hacemos.
+              En{" "}
+              <span className="u--cursive-text u--red">by Carla Herrero</span>{" "}
+              estaremos encantados de{" "}
+              <span className="u--strong-text">
+                darte la respuesta creativa que necesites,
+              </span>
+              esto es todo lo que hacemos.
             </p>
           </div>
           <div className="u--grid-4">
@@ -144,8 +154,10 @@ const Home = () => {
               <p className="u--white">
                 Porque somos un equipo de profesionales apasionados por el
                 diseño web y la comunicación digital. Nos encanta lo que hacemos
-                y nos comprometemos a ofrecerte un servicio personalizado y de
-                calidad.
+                y nos comprometemos a ofrecerte un{" "}
+                <span className="u--strong-text">
+                  servicio personalizado y de calidad.
+                </span>
               </p>
               <Button
                 text="Envía un whatsapp"

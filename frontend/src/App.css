@@ -77,6 +77,15 @@ h3 {
 
 /* UTILITIES */
 
+.u--cursive-text {
+  font-style: italic;
+  font-family: var(--font-tit);
+}
+.u--strong-text {
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
 .u--red-bg {
   background-color: var(--primary-color);
 }
@@ -126,9 +135,6 @@ h3 {
 
 .u--max-w-95 {
   max-width: 95rem;
-}
-
-@media (min-width: 480px) {
 }
 
 @media (min-width: 768px) {

@@ -11,7 +11,7 @@ import Footer from "../components/footer/Footer";
 import Modal from "../components/modal/Modal";
 import ResponsiveImage from "../components/responsiveImage/ResponsiveImage,";
 
-import { services } from "../data/services";
+import { services } from "../data/services.jsx";
 import { telephoneNumber } from "../data/utils";
 
 const Servicios = () => {
@@ -27,7 +27,12 @@ const Servicios = () => {
         <Banner
           title={"Servicios"}
           paragraph={
-            "Hacemos (casi) todo, lo que puede hacerse con un ordenador"
+            <>
+              Hacemos (casi) todo,{" "}
+              <span className="u--strong-text">
+                lo que puede hacerse con un ordenador
+              </span>
+            </>
           }
         />
       </section>
@@ -41,7 +46,7 @@ const Servicios = () => {
                 item={service}
                 className="service-fullcard"
                 type="service"
-                onClick={() => handleOpenModal(service)} // 👈 importante
+                onClick={() => handleOpenModal(service)}
               />
             ))}
           </div>
@@ -79,13 +84,13 @@ const Servicios = () => {
                 />
                 <div>
                   <ResponsiveImage
-                    name={`services/${selectedService.img}-2`}
+                    name={`services/${selectedService.img}-3`}
                     ext="png"
                     alt={`imagen de servicio - ${selectedService.name}`}
                     className="modal-service__img"
                   />
                   <ResponsiveImage
-                    name={`services/${selectedService.img}-3`}
+                    name={`services/${selectedService.img}-4`}
                     ext="png"
                     alt={`imagen de servicio - ${selectedService.name}`}
                     className="modal-service__img"
@@ -93,7 +98,7 @@ const Servicios = () => {
                 </div>
               </div>
               <ResponsiveImage
-                name={`services/${selectedService.img}-1`}
+                name={`services/${selectedService.img}-2`}
                 ext="png"
                 alt={`imagen de servicio - ${selectedService.name}`}
                 className="modal-service__img"

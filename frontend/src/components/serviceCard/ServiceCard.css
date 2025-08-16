@@ -4,9 +4,13 @@
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  justify-content: center;
   border: solid var(--primary-color) 0.2rem;
   padding: 4rem;
+}
+
+.service-car__title-box {
+  display: grid;
+  justify-items: center;
 }
 
 .service-card p {

@@ -50,25 +50,12 @@ const Footer = () => {
       </div>
       <div className="footer__copyright u--white">
         <p>
-          <span className="u--red">by Carla Herrero </span>
-          {getYear()}
+          <span className="u--red">by Carla Herrero, </span>
+          &#169; {getYear()}
         </p>
         <p>Todos los derechos reservados</p>
         <p className="footer__legal">
           <NavLink to="/politicas">Políticas de uso</NavLink>
-        </p>
-        <p>
-          Desarrollado con pasión por{" "}
-          <span>
-            <a
-              href="https://netneo.es"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="u--red"
-            >
-              netneo
-            </a>
-          </span>
         </p>
       </div>
     </div>
