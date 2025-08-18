@@ -1,7 +1,7 @@
 import "./Contacto.css";
 import Nav from "../components/nav/Nav";
 import Banner from "../components/banner/Banner";
-import ResponsiveImage from "../components/responsiveImage/ResponsiveImage,";
+import ResponsiveImage from "../components/responsiveImage/ResponsiveImage";
 import SocialNav from "../components/socialNav/SocialNav";
 import Button from "../components/button/Button";
 import InstagramGallery from "../components/instagramGallery/InstagramGallery";

@@ -1,41 +1,49 @@
+// /hooks/useScrollReveal.js
 import { useEffect, useRef, useState } from "react";
 
-const useScrollReveal = (threshold = 0.5) => {
+const useScrollReveal = ({
+  offset = 0.15,
+  threshold = 0.1,
+  delay = 120,
+} = {}) => {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const tRef = useRef(null);
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    if (!el || !("IntersectionObserver" in window)) {
+      setIsVisible(true);
+      return;
+    }
+
+    const pct = Math.max(0, Math.min(offset, 0.49));
+    const rootMargin = `-${pct * 100}% 0px -${pct * 100}% 0px`;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          const viewportHeight = window.innerHeight;
-          const elTop = entry.boundingClientRect.top;
-          const elBottom = entry.boundingClientRect.bottom;
-          const elMiddle = elTop + (elBottom - elTop) / 2;
+        const shouldShow =
+          entry.isIntersecting && entry.intersectionRatio >= threshold;
 
-          // Activamos si el centro del elemento está dentro del centro del viewport
-          const isCentered =
-            elMiddle > viewportHeight * 0.3 && elMiddle < viewportHeight * 0.7;
-
-          setIsVisible(isCentered);
+        if (shouldShow) {
+          // activa con pequeño retardo
+          clearTimeout(tRef.current);
+          tRef.current = setTimeout(() => setIsVisible(true), delay);
         } else {
+          // si sale o aún no entró, cancela y oculta
+          clearTimeout(tRef.current);
           setIsVisible(false);
         }
       },
-      {
-        threshold: threshold,
-      }
+      { threshold, rootMargin }
     );
 
     observer.observe(el);
-
     return () => {
-      if (el) observer.unobserve(el);
+      clearTimeout(tRef.current);
+      observer.disconnect();
     };
-  }, [threshold]);
+  }, [offset, threshold, delay]);
 
   return [ref, isVisible];
 };

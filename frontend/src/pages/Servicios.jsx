@@ -9,7 +9,7 @@ import Button from "../components/button/Button";
 import InstagramGallery from "../components/instagramGallery/InstagramGallery";
 import Footer from "../components/footer/Footer";
 import Modal from "../components/modal/Modal";
-import ResponsiveImage from "../components/responsiveImage/ResponsiveImage,";
+import ResponsiveImage from "../components/responsiveImage/ResponsiveImage";
 
 import { services } from "../data/services.jsx";
 import { telephoneNumber } from "../data/utils";

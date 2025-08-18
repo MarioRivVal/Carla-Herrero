@@ -60,7 +60,6 @@ Backend**, bundled with **Vite**.
 
 <p align="center">
   <img src="./docs/images/screenshot1.png" alt="Screenshot 1" width="400px" />
-  <img src="./docs/images/screenshot2.png" alt="Screenshot 2" width="150px" />
 </p>
 
 ---

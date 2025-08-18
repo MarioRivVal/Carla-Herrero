@@ -1,7 +1,7 @@
 import React from "react";
 import "./InstagramGallery.css";
 import { instagramImages } from "../../data/instagramImages";
-import ResponsiveImage from "../responsiveImage/ResponsiveImage,";
+import ResponsiveImage from "../responsiveImage/ResponsiveImage";
 
 import InstagramIcon from "../../icons/instagram.svg?react";
 

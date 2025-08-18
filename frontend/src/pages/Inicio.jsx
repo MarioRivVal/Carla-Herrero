@@ -5,7 +5,7 @@ import { getProjects } from "../services/projectService";
 import Nav from "../components/nav/Nav";
 import SocialNav from "../components/socialNav/SocialNav";
 import HeaderSlider from "../components/headerSlider/HeaderSlider";
-import ResponsiveImage from "../components/responsiveImage/ResponsiveImage,";
+import ResponsiveImage from "../components/responsiveImage/ResponsiveImage";
 import PresentationCard from "../components/PresentationCard/PresentationCard";
 import Button from "../components/button/Button";
 import ServiceCard from "../components/serviceCard/ServiceCard";
