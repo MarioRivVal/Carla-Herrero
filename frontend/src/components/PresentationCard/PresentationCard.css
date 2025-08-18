@@ -47,6 +47,13 @@
   margin-bottom: 2rem;
 }
 
+/* HOVER EFFECT ON DESKTOP */
+
+.presentation-card:hover .presentation-card__img {
+  opacity: 0;
+  transform: scale(1.02);
+}
+
 .presentation-card:hover .presentation-card__text {
   opacity: 1;
   visibility: visible;
@@ -57,6 +64,7 @@
   transform: translateY(0);
   transition-delay: 0.25s;
 }
+
 .presentation-card:hover .presentation-card__text p,
 .presentation-card:hover .presentation-card__text .presentation__btn {
   opacity: 1;
@@ -64,28 +72,26 @@
   transition-delay: 0.4s;
 }
 
-/* === SCROLL/TOUCH === */
-@media (hover: none) and (pointer: coarse) {
-  .presentation-card.is-visible .presentation-card__img {
-    opacity: 0;
-    transform: scale(1.02);
-  }
+/* SCROLLING REVEAL ON MOBILES */
+.presentation-card.is-visible .presentation-card__img {
+  opacity: 0;
+  transform: scale(1.02);
+}
 
-  .presentation-card.is-visible .presentation-card__text {
-    opacity: 1;
-    visibility: visible;
-  }
+.presentation-card.is-visible .presentation-card__text {
+  opacity: 1;
+  visibility: visible;
+}
 
-  .presentation-card.is-visible .presentation-card__text h4 {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.25s;
-  }
+.presentation-card.is-visible .presentation-card__text h4 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.25s;
+}
 
-  .presentation-card.is-visible .presentation-card__text p,
-  .presentation-card.is-visible .presentation-card__text .presentation__btn {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.4s;
-  }
+.presentation-card.is-visible .presentation-card__text p,
+.presentation-card.is-visible .presentation-card__text .presentation__btn {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
 }

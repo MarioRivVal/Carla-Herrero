@@ -2,9 +2,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const useScrollReveal = ({
-  offset = 0.15,
-  threshold = 0.1,
-  delay = 120,
+  offset = 0.18,
+  threshold = 0,
+  delay = 150,
 } = {}) => {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -17,20 +17,16 @@ const useScrollReveal = ({
       return;
     }
 
-    const pct = Math.max(0, Math.min(offset, 0.49));
-    const rootMargin = `-${pct * 100}% 0px -${pct * 100}% 0px`;
+    // Usamos px para máxima compatibilidad
+    const offsetPx = Math.round(window.innerHeight * offset);
+    const rootMargin = `-${offsetPx}px 0px -${offsetPx}px 0px`;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        const shouldShow =
-          entry.isIntersecting && entry.intersectionRatio >= threshold;
-
-        if (shouldShow) {
-          // activa con pequeño retardo
+        if (entry.isIntersecting) {
           clearTimeout(tRef.current);
           tRef.current = setTimeout(() => setIsVisible(true), delay);
         } else {
-          // si sale o aún no entró, cancela y oculta
           clearTimeout(tRef.current);
           setIsVisible(false);
         }
