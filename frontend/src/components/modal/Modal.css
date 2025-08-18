@@ -16,11 +16,10 @@
 }
 
 .modal-container {
-  display: flex;
   width: 90%;
-  height: 95%;
+  /* height: 90%; */
   max-width: 120rem;
-  max-height: 70rem;
+  max-height: 80rem;
   background-color: #fff;
   border-radius: 2rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
@@ -59,8 +58,8 @@
   opacity: 1;
 }
 
-@media (min-width: 1024px) {
-  /* .modal-container{
-    display: flex;
-  } */
+@media (min-width: 1280px) {
+  .modal-container {
+    width: 60%;
+  }
 }

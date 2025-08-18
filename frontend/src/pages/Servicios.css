@@ -15,7 +15,6 @@
 
 .modal-service__img {
   border: solid 2px var(--primary-color);
-  height: 100%;
 }
 
 .modal-content .u--grid-2 {
@@ -42,10 +41,13 @@
 }
 
 @media (min-width: 768px) {
-  /* .modal-content {
+  .modal-content {
+    padding: 6rem 4rem 4rem;
+  }
+
+  .modal-service__img {
     height: 100%;
-    align-content: center;
-  } */
+  }
 
   .modal-content h2 {
     text-align: center;
