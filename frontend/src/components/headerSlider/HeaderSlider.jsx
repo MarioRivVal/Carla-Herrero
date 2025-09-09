@@ -4,7 +4,7 @@ import ArrowLargeLeftIcon from "../../icons/arrow-large-left.svg?react";
 import ArrowLargeRightIcon from "../../icons/arrow-large-right.svg?react";
 
 const slides = [
-  { image: "/img/header-1.jpeg", text: ["Bienvenidos!"] },
+  { image: "/img/header-1.jpeg", text: ["¡Hola!"] },
   { image: "/img/header-2.jpeg", text: ["Servicios", "de Diseño"] },
 ];
 
